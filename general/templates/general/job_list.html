@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kestus</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Job Openings</a></h1>
+        </div>
+
+{% for job in job_list %}
+    <div>
+        <p>published: {{ job.published_date }}</p>
+        <h2><a href="">{{ job.title }}</a></h2>
+        <p>{{ job.pretext|linebreaks }}</p>
+    </div>
+{% endfor %}
+    </body>
+</html>
